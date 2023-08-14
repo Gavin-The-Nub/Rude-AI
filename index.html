@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rude Baldwin</title>
+  </head>
+  <body>
+    <p>BEWARE! RUDE AI</p>
+    <p>Huhulaan ko kung ilan ang magiging anak mo!</p>
+    <p>bago ang lahat kompletuhin mo muna ang mga sumusunod..</p>
+    <p>siguraduhing TAMA at KUMPLETO ang lahat ng detalye</p>
+    <br />
+    <input
+      placeholder="lagay mo name mo"
+      class="name"
+      onkeydown="nameEnter()"
+    />
+    <button onclick="clickName()" class="submit">Submit</button>
+    <p class="nameResult"></p>
+    <input
+      placeholder="lagay mo apelyido mo"
+      class="sur"
+      onkeydown="surEnter()"
+    />
+    <button onclick="clickSur()" class="submit">Submit</button>
+    <p class="surResult"></p>
+
+    <input
+      placeholder="lagay mo fav color mo"
+      class="favColor"
+      onkeydown="favColorEnter()"
+    />
+    <button onclick="clickFavColor()" class="submit">Submit</button>
+    <p class="favColorResult"></p>
+    <br />
+    <p>ALL CAPITAL* DAPAT SA BIRTH MONTH HA SUBUKAN MO I-LOWERCASE TAMO</p>
+    <input
+      placeholder="lagay mo birth month mo"
+      class="birthMonth"
+      onkeydown="enterBM()"
+    />
+    <button onclick="bMEnter()" class="submit">Submit</button>
+    <p class="bMResult"></p>
+
+    <p style="display: inline-block">May GF/BF kaba?</p>
+    <button class="yes"><a href="yes.html">YES</a></button
+    ><button class="no"><a href="no.html">NO</a></button>
+    <p class="result"></p>
+
+    <script>
+      function bMEnter() {
+        let bMSubmit = document.querySelector(".birthMonth");
+        let submittedBM = bMSubmit.value;
+        let outcome = document.querySelector(".bMResult");
+
+        if (submittedBM === "JANUARY" || submittedBM === "JAN") {
+          outcome.innerHTML = "uto uto sa instruction.";
+        } else if (submittedBM === "") {
+          alert(
+            "gusto mo bang isampal ko sayo to? 'siguraduhing tama at KUMPLETO "
+          );
+          //outcome.innerHTML =
+          // "gusto mo bang isampal ko sayo to? 'siguraduhing tama at KUMPLETO' ";
+        } else if (submittedBM === "FEBRUARY" || submittedBM === "FEB") {
+          outcome.innerHTML =
+            "I saw on google na Feb ang rarest birth month ^^";
+        } else if (submittedBM === "MARCH" || submittedBM === "MAR") {
+          outcome.innerHTML =
+            "magaganda daw pinanganak ng march e, di lang ako sure sayo";
+        } else if (submittedBM === "APRIL" || submittedBM === "APR") {
+          outcome.innerHTML = "Same kayo ng tropa ko, kaso patay na sya e";
+        } else if (submittedBM === "MAY" || submittedBM === "MAYO") {
+          outcome.innerHTML = "Same bro";
+        } else if (submittedBM === "JUNE" || submittedBM === "JUN") {
+          outcome.innerHTML = "fosho pretty ka";
+        } else if (submittedBM === "JULY" || submittedBM === "JUL") {
+          outcome.innerHTML = "Mabait ka no? penge 5";
+        } else if (submittedBM === "AUGUST" || submittedBM === "AUG") {
+          outcome.innerHTML = "birth month ng mga abnoy";
+        } else if (submittedBM === "SEPTEMBER" || submittedBM === "SEPT") {
+          outcome.innerHTML = "ok";
+        } else if (submittedBM === "OCTOBER" || submittedBM === "OCT") {
+          outcome.innerHTML = "Okay";
+        } else if (submittedBM === "NOVEMBER" || submittedBM === "NOV") {
+          outcome.innerHTML = "lucky daw mga pinganak ng nov e";
+        } else if (submittedBM === "DECEMBER" || submittedBM === "DEC") {
+          outcome.innerHTML = "swerte mo naman";
+        } else {
+          outcome.innerHTML = "ginagago mo ba ako?!";
+        }
+      }
+
+      function enterBM() {
+        if (event.key === "Enter") {
+          bMEnter();
+        }
+      }
+
+      function clickFavColor() {
+        let favColorSubmit = document.querySelector(".favColor");
+        let submittedColor = favColorSubmit.value;
+        let outcome = document.querySelector(".favColorResult");
+
+        if (submittedColor === "blue" || submittedColor === "Blue") {
+          outcome.innerHTML = "Same!";
+        } else if (submittedColor === "") {
+          alert("aba lagyan morin to!");
+          //outcome.innerHTML = "aba lagyan morin to!";
+        } else if (submittedColor === "pink" || submittedColor === "Pink") {
+          outcome.innerHTML = "Nice choice!.";
+        } else if (submittedColor === "Orange" || submittedColor === "orange") {
+          outcome.innerHTML = "sakit nyan sa mata lods";
+        } else if (submittedColor === "red") {
+          outcome.innerHTML = "Bet ko rin yan";
+        } else {
+          outcome.innerHTML = `${submittedColor}, ganyan din sa lolo ko e kaso patay na sya `;
+        }
+      }
+
+      function favColorEnter() {
+        if (event.key === "Enter") {
+          clickFavColor();
+        }
+      }
+
+      function clickSur() {
+        let surSubmit = document.querySelector(".sur");
+        let submittedSur = surSubmit.value;
+        let outcome = document.querySelector(".surResult");
+
+        if (submittedSur === "lodor" || submittedSur === "Lodor") {
+          outcome.innerHTML = "Isa sa pinaka magandang apelyido para sakin.";
+        } else if (submittedSur === "") {
+          alert(
+            "nakalagay nanga sa instruction na dapat KUMPLETO e, pag sa ulaga talaga"
+          );
+          //outcome.innerHTML =
+          //"nakalagay nanga sa instruction na dapat kumpleto e, pag sa ulaga talaga";
+        } else if (submittedSur === "Dolor" || submittedSur === "dolor") {
+          outcome.innerHTML =
+            "kahit baliktarin mopa ang mundo di magbabago ang pagtingin ko sayo.";
+        } else {
+          outcome.innerHTML = "paremove nalang ulit please lang";
+        }
+      }
+      function surEnter() {
+        if (event.key === "Enter") {
+          clickSur();
+        }
+      }
+      function clickName() {
+        let nameSubmit = document.querySelector(".name");
+        let submittedName = nameSubmit.value;
+        let outcome = document.querySelector(".nameResult");
+
+        if (submittedName === "Ian" || submittedName === "ian") {
+          outcome.innerHTML = "What a wonderful name.";
+        } else if (submittedName === "") {
+          alert("pangit ba pangalan mo? Bat ayaw mo ilagay!?");
+          //outcome.innerHTML = "pangit ba pangalan mo? Bat ayaw mo ilagay!?";
+        } else if (submittedName === "Hadrian" || submittedName === "hadrian") {
+          outcome.innerHTML = "What a beautiful name.";
+        } else if (submittedName === "Gavin" || submittedName === "gavin") {
+          outcome.innerHTML = "Such a wonderful name.";
+        } else if (
+          submittedName === "Axellerosh" ||
+          submittedName === "axellerosh"
+        ) {
+          outcome.innerHTML = "Sanaol maganda pangalan";
+        } else if (submittedName === "axel" || submittedName === "Axel") {
+          outcome.innerHTML = "Sanaol maganda pangalan";
+        } else {
+          outcome.innerHTML = "nangyan tanggalin monga, sama tingnan e.";
+        }
+      }
+
+      function nameEnter() {
+        if (event.key === "Enter") {
+          clickName();
+        }
+      }
+    </script>
+  </body>
+</html>
